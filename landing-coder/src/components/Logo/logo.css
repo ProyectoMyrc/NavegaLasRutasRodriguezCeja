@@ -1,15 +1,13 @@
 .logo-container {
-    /* Mantiene el logo alineado */
     display: flex;
     align-items: center;
 }
 
 .logo-text {
-    /* Estilo del texto */
     font-size: 1.5rem; /* Tamaño de fuente grande */
-    color: #4A90E2; /* Un color azul llamativo para el logo */
+    color: #c2a64a; /* Un color dorado llamativo para el logo */
     font-family: sans-serif;
     font-weight: bold;
     margin: 0; /* Elimina márgenes predeterminados del h1 */
-    cursor: pointer; /* Indica que es clickable (para cuando añadas la navegación) */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
 }

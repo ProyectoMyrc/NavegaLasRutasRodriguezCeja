@@ -1,28 +1,21 @@
 .navbar-header {
-    /* 1. Usa Flexbox para alinear los elementos horizontalmente */
     display: flex;
-    /* 2. Distribuye el espacio entre los elementos */
     justify-content: space-between; 
-    /* 3. Centra los elementos verticalmente */
-    align-items: center; 
-    
-    /* Estilo visual de la barra */
-    background-color: #333333; /* Fondo oscuro */
+    align-items: center;/* Centra verticalmente los elementos */
+    background-color: #181717; /* Fondo oscuro */
     padding: 15px 30px; /* Espacio interior */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-shadow: 0 2px 4px rgba(17, 17, 17, 0.1); /* Sombra ligera */
 }
 
 /* --- Estilos para los Enlaces de Navegación --- */
 
 .navbar-links {
-    /* Alinea los enlaces entre sí */
-    display: flex;
+    display: flex;/* Usa flexbox para alinear los enlaces */
     gap: 25px; /* Espacio entre cada enlace */
 }
 
 .nav-link {
-    /* Quita el estilo de enlace predeterminado */
-    text-decoration: none; 
+    text-decoration: none; /* Sin subrayado */
     color: white; /* Color de texto blanco */
     font-size: 1rem;
     padding: 5px 10px;
@@ -30,7 +23,7 @@
 }
 
 .nav-link:hover {
-    color: #4A90E2; /* Cambia a azul al pasar el ratón */
+    color: #b68946; /* Color dorado al pasar el ratón */
 }
 
 /* --- Estilos para el Widget del Carrito --- */
@@ -39,5 +32,4 @@
     font-size: 1.2rem;
     color: white;
     cursor: pointer;
-    /* Si tienes un componente CartWidget más complejo, los estilos irían en su propio CSS */
 }

@@ -1,15 +1,14 @@
 import React from 'react';
-import './Logo.css'; // Para darle estilos a tu logo
+import './Logo.css'; // Para darle estilos al logo
 
 const Logo = () => {
-    // Definimos el texto del logo (podrías pasarlo como prop, pero por ahora lo dejamos fijo)
-    const storeName = "E-Commerce Tech"; 
+    const storeName = "Motorlife"; // Nombre de la tienda
 
     return (
         <div className="logo-container">
-            {/* Aquí puedes poner un <img> para el logo real o el nombre de tu tienda */}
+            {/* Aquí puedes se pondrá un <img> para el logo real o el nombre de mi tienda*/}
             <h1 className="logo-text">
-                {storeName} 💻
+                {storeName} 🏍️
             </h1>
         </div>
     );

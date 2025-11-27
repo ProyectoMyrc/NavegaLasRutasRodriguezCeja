@@ -4,21 +4,21 @@ import CartWidget from '../CartWidget/CartWidget'; // 👈 Importamos CartWidget
 import './NavBar.css'; 
 
 const NavBar = () => {
-    // Definimos un número para el contador (por ahora, fijo)
-    const itemsInCart = 4; // Podrías cambiarlo para probar
+    // se define un número para el contador por ahora, fijo
+    const itemsInCart = 1; // se puede cambiar para probar
 
     return (
         <header className="navbar-header">
             <Logo /> 
 
             <nav className="navbar-links">
-                <a href="#categoria-a" className="nav-link">Electrónica</a>
-                <a href="#categoria-b" className="nav-link">Ropa</a>
-                <a href="#categoria-c" className="nav-link">Hogar</a>
+                <a href="#categoria-a" className="nav-link">Deportivas</a>
+                <a href="#categoria-b" className="nav-link">Naked</a>
+                <a href="#categoria-c" className="nav-link">Scooters</a>
+                <a href="#categoria-c" className="nav-link">Trail</a>
             </nav>
 
             <div className="navbar-widget">
-                {/* 👈 Insertamos CartWidget y le pasamos el número como prop */}
                 <CartWidget itemCount={itemsInCart} /> 
             </div>
         </header>
