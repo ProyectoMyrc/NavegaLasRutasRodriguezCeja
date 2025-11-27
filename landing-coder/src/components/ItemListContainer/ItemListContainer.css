@@ -1,0 +1,18 @@
+.item-list-container {
+    /* Centra el contenido en la página */
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    min-height: 70vh; /* Asegura que ocupe una buena parte de la altura */
+}
+
+.item-list-container h2 {
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.item-list-container p {
+    color: #666666;
+    font-size: 1.1rem;
+}

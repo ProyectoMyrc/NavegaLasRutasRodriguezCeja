@@ -1,0 +1,31 @@
+.cart-widget-container {
+    /* Usa relative para que el contador se pueda posicionar de forma absoluta */
+    position: relative; 
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.cart-icon {
+    /* Asegura que el ícono esté visible */
+    padding: 5px;
+}
+
+.item-count {
+    /* Posiciona el contador en la esquina superior derecha del ícono */
+    position: absolute;
+    top: -5px; 
+    right: -10px;
+    
+    /* Estilo de la "burbuja" del contador */
+    background-color: #FF4136; /* Rojo vivo */
+    color: white;
+    font-size: 0.75rem; /* Letra pequeña */
+    font-weight: bold;
+    border-radius: 50%; /* Lo hace circular */
+    padding: 3px 6px; /* Espacio interior para el número */
+    min-width: 15px; /* Ancho mínimo para números de 1 o 2 dígitos */
+    text-align: center;
+}
