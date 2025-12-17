@@ -1,20 +1,21 @@
-import React from 'react';
-import NavBar from './components/NavBar/NavBar'; 
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// src/App.jsx
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+// src/App.jsx
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
-      {/* 1. Insertamos la Barra de Navegación */}
+    <>
       <NavBar />
-      
-      {/* 2. Insertamos el Contenedor y le pasamos la 'prop' greeting */}
-      <ItemListContainer 
-        greeting="¡Bienvenido a Mi Tienda Online! ¡Encuentra lo que necesitas!" 
-      />
-      
-      {/* Puedes agregar más componentes aquí abajo, como el Footer */}
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting="¡Bienvenidos a MotoShop!" />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer greeting="Categoría" />} />
+        <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
+      </Routes>
+    </>
   );
 }
 

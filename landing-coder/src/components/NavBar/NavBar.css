@@ -1,35 +1,26 @@
-.navbar-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;/* Centra verticalmente los elementos */
-    background-color: #181717; /* Fondo oscuro */
-    padding: 15px 30px; /* Espacio interior */
-    box-shadow: 0 2px 4px rgba(17, 17, 17, 0.1); /* Sombra ligera */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: white;
 }
-
-/* --- Estilos para los Enlaces de Navegación --- */
 
 .navbar-links {
-    display: flex;/* Usa flexbox para alinear los enlaces */
-    gap: 25px; /* Espacio entre cada enlace */
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav-link {
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Color de texto blanco */
-    font-size: 1rem;
-    padding: 5px 10px;
-    transition: color 0.3s ease; /* Transición suave para el hover */
+.link {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-link:hover {
-    color: #b68946; /* Color dorado al pasar el ratón */
-}
-
-/* --- Estilos para el Widget del Carrito --- */
-
-.navbar-widget {
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
+/* Este es el estilo que se aplicará automáticamente al hacer clic */
+.active-link {
+  color: #ff4500; /* Color naranja/rojo tipo deportivo */
+  text-decoration: underline;
+  font-weight: bold;
 }

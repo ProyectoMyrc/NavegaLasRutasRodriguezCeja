@@ -1,28 +1,46 @@
 import React from 'react';
-import Logo from '../Logo/Logo'; // 👈 Importamos el nuevo componente
-import CartWidget from '../CartWidget/CartWidget'; // 👈 Importamos CartWidget 
-import './NavBar.css'; 
+import { Link, NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css';
 
 const NavBar = () => {
-    // se define un número para el contador por ahora, fijo
-    const itemsInCart = 1; // se puede cambiar para probar
+	return (
+    <nav className="navbar">
+      {/* El Logo siempre debe llevar al Inicio (catálogo completo) */}
+      <Link to="/" className="navbar-logo">
+        <h1>MotoShop 🏍️</h1>
+      </Link>
 
-    return (
-        <header className="navbar-header">
-            <Logo /> 
+      <ul className="navbar-links">
+        <li>
+          <NavLink 
+            to="/category/deportivas" 
+            className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+          >
+            Deportivas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/category/urbanas" 
+            className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+          >
+            Urbanas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/category/adventure" 
+            className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+          >
+            Adventure
+          </NavLink>
+        </li>
+      </ul>
 
-            <nav className="navbar-links">
-                <a href="#categoria-a" className="nav-link">Deportivas</a>
-                <a href="#categoria-b" className="nav-link">Naked</a>
-                <a href="#categoria-c" className="nav-link">Scooters</a>
-                <a href="#categoria-c" className="nav-link">Trail</a>
-            </nav>
-
-            <div className="navbar-widget">
-                <CartWidget itemCount={itemsInCart} /> 
-            </div>
-        </header>
-    );
-}
+      <CartWidget />
+    </nav>
+  );
+};
 
 export default NavBar;
