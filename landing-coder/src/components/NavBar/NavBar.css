@@ -1,26 +1,21 @@
+/* Efecto suave para los links */
+.nav-link {
+    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+.nav-link:hover {
+    color: #E31B23 !important; /* Rojo al pasar el mouse */
+    transform: scale(1.05); /* Un ligero efecto de crecimiento */
+}
+
+/* Estilo para el logo */
+.navbar-brand {
+    letter-spacing: -1px;
+}
+
+/* Hacer que la barra sea un poco transparente al hacer scroll  */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #222;
-  color: white;
-}
-
-.navbar-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.link {
-  color: white;
-  text-decoration: none;
-}
-
-/* Este es el estilo que se aplicará automáticamente al hacer clic */
-.active-link {
-  color: #ff4500; /* Color naranja/rojo tipo deportivo */
-  text-decoration: underline;
-  font-weight: bold;
+    border-bottom: 2px solid #E31B23; /* Una línea roja delgada en toda la base del Nav */
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 37, 41, 0.95) !important;
 }

@@ -1,3 +1,4 @@
+
 .item-list-container {
     text-align: center;
     padding: 40px 20px;
@@ -14,4 +15,13 @@
 .item-list-container p {
     color: #666666;
     font-size: 1.1rem;
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(227, 27, 35, 0.2) !important; /* Sombra roja sutil */
 }

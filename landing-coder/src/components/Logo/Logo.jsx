@@ -6,7 +6,7 @@ const Logo = () => {
 
     return (
         <div className="logo-container">
-            {/* Aquí puedes se pondrá un <img> para el logo real o el nombre de mi tienda*/}
+            {/* Aquí se pondrá un <img> para el logo real o el nombre de mi tienda según deje el diseño final */}
             <h1 className="logo-text">
                 {storeName} 🏍️
             </h1>

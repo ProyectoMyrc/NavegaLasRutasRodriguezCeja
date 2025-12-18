@@ -1,21 +1,26 @@
 import React from 'react';
-import './CartWidget.css'; // Archivo CSS para darle estilo
+// Importa el ícono de carrito de Bootstrap Icons
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
+const CartWidget = () => {
+    // Por ahora el valor es estático, luego lo conectare con CartContext
+    const totalItems = 3; 
 
-const CartWidget = ({ itemCount = 0 }) => { // Desestructuramos 'itemCount' de las props
     return (
-        <div className="cart-widget-container">
-            <span className="cart-icon" role="img" aria-label="Carrito de compras">
-                🛒
-            </span>
+        <div className="position-relative d-inline-block" style={{ cursor: 'pointer' }}>
+            {/* Ícono del Carrito */}
+            <i className="bi bi-cart3 text-white fs-3 transition-hover hover-red"></i>
             
-            {itemCount > 0 && (// Si itemCount es mayor que 0, mostramos el contador
-                <span className="item-count">
-                    {itemCount}
+            {/* Burbuja de Notificación (Badge) */}
+            {totalItems > 0 && (
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger shadow-sm"
+                      style={{ fontSize: '0.7rem', border: '2px solid #212529' }}>
+                    {totalItems}
+                    <span className="visually-hidden">productos en el carrito</span>
                 </span>
             )}
         </div>
     );
-}
+};
 
 export default CartWidget;

@@ -1,7 +1,6 @@
-// src/App.jsx
+
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-// src/App.jsx
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
