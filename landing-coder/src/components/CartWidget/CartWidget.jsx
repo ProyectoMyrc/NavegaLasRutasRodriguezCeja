@@ -1,25 +1,30 @@
-import React from 'react';
-// Importa el ícono de carrito de Bootstrap Icons
+import React, { useContext } from 'react'; // 1. Importamos useContext
+import { CartContext } from '../../context/CartContext'; // 2. Importamos tu contexto
+import { Link } from 'react-router-dom'; // Para navegar a la vista del carrito
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const CartWidget = () => {
-    // Por ahora el valor es estático, luego lo conectare con CartContext
-    const totalItems = 3; 
+    // 3. Consumimos la función totalQuantity del contexto
+    const { totalQuantity } = useContext(CartContext);
+
+    // Calculamos el total dinámicamente
+    const totalItems = totalQuantity(); 
 
     return (
-        <div className="position-relative d-inline-block" style={{ cursor: 'pointer' }}>
+        /* 4. Envolvemos en un Link para que al hacer clic nos lleve al carrito */
+        <Link to="/cart" className="position-relative d-inline-block text-decoration-none" style={{ cursor: 'pointer' }}>
             {/* Ícono del Carrito */}
             <i className="bi bi-cart3 text-white fs-3 transition-hover hover-red"></i>
             
-            {/* Burbuja de Notificación (Badge) */}
+            {/* Burbuja de Notificación Dinámica */}
             {totalItems > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger shadow-sm"
-                      style={{ fontSize: '0.7rem', border: '2px solid #212529' }}>
+                        style={{ fontSize: '0.7rem', border: '2px solid #212529' }}>
                     {totalItems}
                     <span className="visually-hidden">productos en el carrito</span>
                 </span>
             )}
-        </div>
+        </Link>
     );
 };
 
